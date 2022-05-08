@@ -26,6 +26,10 @@ You can publish migration and configuration with:
 ```bash
 php artisan vendor:publish --tag="RanjbarAli\LaravelSetting\LaravelSettingServiceProvider::class"
 ```
+Migrate:
+```bash
+php artisan migrate
+```
 
 ## Usage
 
