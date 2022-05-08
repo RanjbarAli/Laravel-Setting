@@ -1,0 +1,33 @@
+{
+    "name": "ranjbarali/laravel-setting",
+    "description": "Easily save, update and get titles, descriptions, and more. it is very easy to use.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ali Ranjbar",
+            "email": "info@aliranjbar.ir",
+            "homepage": "https://aliranjbar.ir"
+        }
+    ],
+    "homepage": "https://github.com/ranjbarali/laravel-setting",
+    "keywords": ["Laravel", "LaravelSetting"],
+    "require": {
+        "illuminate/support": ">=9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "RanjbarAli\\LaravelSetting\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "RanjbarAli\\LaravelSetting\\LaravelSettingServiceProvider"
+            ],
+            "aliases": {
+                "LaravelSetting": "RanjbarAli\\LaravelSetting\\Facades\\LaravelSetting"
+            }
+        }
+    }
+}
