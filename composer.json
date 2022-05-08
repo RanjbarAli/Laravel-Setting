@@ -11,9 +11,6 @@
     ],
     "homepage": "https://github.com/ranjbarali/laravel-setting",
     "keywords": ["Laravel", "LaravelSetting"],
-    "require": {
-        "illuminate/support": "^8.37"
-    },
     "autoload": {
         "psr-4": {
             "RanjbarAli\\LaravelSetting\\": "src/"
