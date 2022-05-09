@@ -3,7 +3,6 @@
 namespace RanjbarAli\LaravelSetting\Libraries;
 
 use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Log;
 use RanjbarAli\LaravelSetting\LaravelSetting as LaravelSettingModel;
 
 class LaravelSettingLibrary
