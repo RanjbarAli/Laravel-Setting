@@ -15,7 +15,7 @@ class LaravelSettingServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-         $this->loadMigrationsFrom(__DIR__.'/migrations');
+         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         $this->mergeConfigFrom(__DIR__.'/../config/laravel-setting.php', 'laravel-setting');
         if ($this->app->runningInConsole()) {
             $this->bootForConsole();
@@ -54,31 +54,12 @@ class LaravelSettingServiceProvider extends ServiceProvider
      */
     protected function bootForConsole(): void
     {
-        // Publishing the configuration file.
         $this->publishes([
             __DIR__.'/../config/laravel-setting.php' => config_path('laravel-setting.php'),
         ], 'laravel-setting.config');
 
         $this->publishes([
-            realpath(__DIR__.'/migrations') => database_path('migrations')
+            realpath(__DIR__.'/../database/migrations') => database_path('migrations')
         ], 'migrations');
-
-        // Publishing the views.
-        /*$this->publishes([
-            __DIR__.'/../resources/views' => base_path('resources/views/vendor/ranjbarali'),
-        ], 'laravel-setting.views');*/
-
-        // Publishing assets.
-        /*$this->publishes([
-            __DIR__.'/../resources/assets' => public_path('vendor/ranjbarali'),
-        ], 'laravel-setting.views');*/
-
-        // Publishing the translation files.
-        /*$this->publishes([
-            __DIR__.'/../resources/lang' => resource_path('lang/vendor/ranjbarali'),
-        ], 'laravel-setting.views');*/
-
-        // Registering package commands.
-        // $this->commands([]);
     }
 }
