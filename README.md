@@ -95,7 +95,7 @@ setting()->restart()
 
 ## Examples
 
-#### add()
+#### add() : Add and Get One
 ```php
 setting()->add('key', 'value');
 setting('key')->value; // Output: 'value'
@@ -108,11 +108,6 @@ setting('key')->set('new value');
 setting('key')->value; // Output: 'new value'
 ```
 
-#### Get One
-```php
-setting()->add('key', 'value');
-setting('key')->value; // Output: 'value'
-```
 #### Get Multiple 
 ```php
 setting()->add('key1', 'foo');
