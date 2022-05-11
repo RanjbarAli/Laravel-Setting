@@ -24,7 +24,7 @@ RanjbarAli\LaravelSetting\LaravelSettingServiceProvider::class,
 
 You can publish migration and configuration with:
 ```bash
-php artisan vendor:publish --tag="RanjbarAli\LaravelSetting\LaravelSettingServiceProvider::class"
+php artisan vendor:publish --provider="RanjbarAli\LaravelSetting\LaravelSettingServiceProvider"
 ```
 Migrate:
 ```bash
