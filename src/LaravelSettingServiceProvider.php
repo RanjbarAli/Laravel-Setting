@@ -15,8 +15,6 @@ class LaravelSettingServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
-        $this->mergeConfigFrom(__DIR__.'/../config/laravel-setting.php', 'laravel-setting');
         if ($this->app->runningInConsole()) {
             $this->bootForConsole();
         }
@@ -29,8 +27,8 @@ class LaravelSettingServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         $this->mergeConfigFrom(__DIR__.'/../config/laravel-setting.php', 'laravel-setting');
-
         // Register the service the package provides.
         $this->app->singleton('laravel-setting', function ($app) {
             return new LaravelSetting;
@@ -56,7 +54,7 @@ class LaravelSettingServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../config/laravel-setting.php' => config_path('laravel-setting.php'),
-        ], 'laravel-setting.config');
+        ], 'config');
 
         $this->publishes([
             realpath(__DIR__.'/../database/migrations') => database_path('migrations')
