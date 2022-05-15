@@ -8,7 +8,7 @@ This is great for storing and receiving general site information.
 
 ## Installation
 
-** requires PHP 8+ and Laravel 9+ **
+***requires PHP 8+ and Laravel 9+***
 
 via composer:
 
