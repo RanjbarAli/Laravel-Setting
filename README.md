@@ -8,19 +8,13 @@ This is great for storing and receiving general site information.
 
 ## Installation
 
-#### requires PHP 8+ and Laravel 9+
+** requires PHP 8+ and Laravel 9+ **
 
 via composer:
 
 ```bash
 $ composer require RanjbarAli/Laravel-Setting
 ```
-If you do not run Laravel 5.5 (or higher), then add the service provider in `config/app.php`:
-
-```php
-RanjbarAli\LaravelSetting\LaravelSettingServiceProvider::class,
-```
-
 
 You can publish migration and configuration with:
 ```bash
