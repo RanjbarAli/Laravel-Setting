@@ -103,11 +103,11 @@ setting()->add('key', 'value');
 setting('key')->value; // Output: "value"
 ```
 ```php
-setting()->add('level', 5);
+setting()->add('level', 5, 'integer');
 setting('level')->value; // Output: 5
 ```
 ```php
-setting()->add('score', 6.5);
+setting()->add('score', 6.5, 'float');
 setting('score')->value; // Output: 6.5
 ```
 
