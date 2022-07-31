@@ -91,8 +91,24 @@ setting()->restart()
 
 #### add() : Add and Get One
 ```php
+setting()->add('key', ['item'], 'array');
+setting('key')->value; // Output: ['item']
+```
+```php
+setting()->add('isOffline', true, 'boolean');
+setting('isOffline')->value; // Output: true
+```
+```php
 setting()->add('key', 'value');
-setting('key')->value; // Output: 'value'
+setting('key')->value; // Output: "value"
+```
+```php
+setting()->add('level', 5);
+setting('level')->value; // Output: 5
+```
+```php
+setting()->add('score', 6.5);
+setting('score')->value; // Output: 6.5
 ```
 
 #### set()
