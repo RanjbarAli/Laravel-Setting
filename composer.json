@@ -16,6 +16,10 @@
             "RanjbarAli\\LaravelSetting\\": "src/"
         }
     },
+     "require": {
+        "php": "^8.0",
+        "laravel/framework": "^9.0",
+    },
     "minimum-stability": "dev",
     "extra": {
         "laravel": {
